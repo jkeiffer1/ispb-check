@@ -1,4 +1,4 @@
-def check_ISBN10?(isbn)
+def check_isbn10?(isbn)
 	if isbn.length == 10
 		true
 	else

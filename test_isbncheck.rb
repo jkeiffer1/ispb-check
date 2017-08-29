@@ -27,6 +27,10 @@ class Isbn_test < Minitest::Test
 	 	assert_equal(false,check_isbn10?("1235$5787x"))
 	 end
 
+	 def test_incorrect_symbols2
+	 	assert_equal(false,check_isbn10?("13$&*@*546"))
+	 end
+
 	 def test_allows_dashes
 	 	assert_equal(true,check_isbn10?("12-03-5782-92"))
 	 end

@@ -34,4 +34,12 @@ class Isbn_test < Minitest::Test
 	 def test_allows_dashes
 	 	assert_equal(true,check_isbn10?("12-03-5782-92"))
 	 end
+
+	 def test_allows_spaces
+	 	assert_equal(true, check_isbn10?("12 03 6782 92"))
+	 end
+
+	 def test_correct_values
+	 	assert_equal(true,check_isbn10?("1-324-23-123X"))
+	 end
 end

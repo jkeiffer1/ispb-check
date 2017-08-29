@@ -15,7 +15,15 @@ class Isbn_test < Minitest::Test
 		assert_equal(false,check_isbn10?("12345678912"))
 	end
 
-	# def test_correct_digits
-	# 	assert_equal()
+	 def test_correct_digits_equals_true
+	 	assert_equal(true,check_isbn10?("123456789x"))
+	 end
 
+	 def test_digits_in_random_order_equals_true
+	 	assert_equal(true,check_isbn10?("324156789x"))
+	 end
+
+	 def test_incorrect_symbols
+	 	assert_equal(false,check_isbn10?("1235$5787x"))
+	 end
 end
